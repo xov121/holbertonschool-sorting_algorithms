@@ -2,16 +2,7 @@
 #define SORT_H
 
 #include <stddef.h> /* For size_t */
-
-/* Function prototypes for task 0, 1, 2, 3 */
-void bubble_sort(int *array, size_t size); /* Task 0 */
-void insertion_sort_list(listint_t **list); /* Task 1 */
-void selection_sort(int *array, size_t size); /* Task 2 */
-void quick_sort(int *array, size_t size); /* Task 3 */
-
-/* Helper functions */
-void print_array(const int *array, size_t size);
-void print_list(const listint_t *list);
+#include <stdbool.h> /* For bool */
 
 /* Data Structure */
 
@@ -28,5 +19,16 @@ typedef struct listint_s
     struct listint_s *prev;
     struct listint_s *next;
 } listint_t;
+
+/* Function prototypes for task 0, 1, 2, 3 */
+void bubble_sort(int *array, size_t size); /* Task 0 */
+void insertion_sort_list(listint_t **list); /* Task 1 */
+void selection_sort(int *array, size_t size); /* Task 2 */
+void quick_sort(int *array, size_t size); /* Task 3 */
+
+/* Helper functions */
+void print_array(const int *array, size_t size);
+void print_list(const listint_t *list);
+void swap_ints(int *a, int *b);
 
 #endif /* SORT_H */
