@@ -15,9 +15,9 @@
  */
 typedef struct listint_s
 {
-  const int n;
-  struct listint_s *prev;
-  struct listint_s *next;
+const int n;
+struct listint_s *prev;
+struct listint_s *next;
 } listint_t;
 
 /* Function prototypes for task 0, 1, 2, 3 */
@@ -34,3 +34,4 @@ void quick_sort_helper(int *array, int low, int high, size_t size);
 int partition(int *array, int low, int high, size_t size);
 
 #endif /* SORT_H */
+

@@ -11,6 +11,7 @@ void quick_sort(int *array, size_t size)
 		return;
 	quick_sort_helper(array, 0, size - 1, size);
 }
+
 /**
  * quick_sort_helper - Sorts an array of integers in ascending order using
  * the Quick sort algorithm
@@ -22,13 +23,16 @@ void quick_sort(int *array, size_t size)
 void quick_sort_helper(int *array, int lo, int hi, size_t size)
 {
 	int p;
+
 	if (lo < hi)
+
 	{
 		p = partition(array, lo, hi, size);
 		quick_sort_helper(array, lo, p - 1, size);
 		quick_sort_helper(array, p + 1, hi, size);
 	}
 }
+
 /**
  * partition - Partitions an array of integers in ascending order using
  * the Quick sort algorithm
@@ -41,6 +45,7 @@ void quick_sort_helper(int *array, int lo, int hi, size_t size)
 int partition(int *array, int lo, int hi, size_t size)
 {
 	int pivot = array[hi], i = lo - 1, j, tmp;
+
 	for (j = lo; j < hi; j++)
 	{
 		if (array[j] < pivot)
